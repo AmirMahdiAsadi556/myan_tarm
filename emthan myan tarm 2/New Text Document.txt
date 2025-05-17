@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرکت مهندسی مکاترونیک پیشرو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+            color: #3b82f6;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 2px;
+            height: calc(100% - 40px);
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">م</div>
+                <h1 class="mr-3 text-xl font-bold text-gray-800">مکاترونیک پیشرو</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#home" class="text-blue-600 font-medium">خانه</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition">درباره ما</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-600 transition">محصولات</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition">خدمات</a>
+                <a href="#events" class="text-gray-700 hover:text-blue-600 transition">رویدادها</a>
+                <a href="#education" class="text-gray-700 hover:text-blue-600 transition">آموزش</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">تماس با ما</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-blue-600 font-medium">خانه</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition">درباره ما</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-600 transition">محصولات</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition">خدمات</a>
+                <a href="#events" class="text-gray-700 hover:text-blue-600 transition">رویدادها</a>
+                <a href="#education" class="text-gray-700 hover:text-blue-600 transition">آموزش</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">تماس با ما</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">پیشگام در صنعت مکاترونیک</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">تلفیق هوشمندانه مکانیک، الکترونیک و نرم‌افزار برای ایجاد راه‌حل‌های نوآورانه</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition">مشاهده محصولات</a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-medium transition">تماس با ما</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">درباره شرکت ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="About Us" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">تاریخچه و ماموریت ما</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        شرکت مهندسی مکاترونیک پیشرو در سال ۱۳۸۵ با هدف ارائه راهکارهای یکپارچه در حوزه سیستم‌های مکاترونیکی تأسیس شد. ما با ترکیب تخصص در مهندسی مکانیک، الکترونیک و علوم کامپیوتر، راه‌حل‌های نوآورانه‌ای برای صنایع مختلف ارائه می‌دهیم.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        ماموریت ما توسعه و پیاده‌سازی سیستم‌های هوشمند و خودکار است که بهره‌وری را افزایش داده و هزینه‌ها را کاهش می‌دهند. ما به کیفیت، نوآوری و رضایت مشتری متعهد هستیم.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-blue-600 mb-2">
+                                <i class="fas fa-bullseye text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">چشم انداز</h4>
+                            <p class="text-gray-600 text-sm">پیشرو در فناوری‌های مکاترونیک در سطح منطقه</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-blue-600 mb-2">
+                                <i class="fas fa-hand-holding-heart text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">ارزش‌ها</h4>
+                            <p class="text-gray-600 text-sm">نوآوری، کیفیت، مسئولیت‌پذیری و کار تیمی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-center text-gray-800 mb-8">تیم متخصص ما</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-gray-800">دکتر علی محمدی</h4>
+                            <p class="text-blue-600 mb-2">مدیر فنی</p>
+                            <p class="text-gray-600">دکترای مهندسی مکاترونیک از دانشگاه صنعتی شریف با ۱۵ سال سابقه در طراحی سیستم‌های خودکار</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-gray-800">مهندس سارا حسینی</h4>
+                            <p class="text-blue-600 mb-2">مدیر کنترل کیفیت</p>
+                            <p class="text-gray-600">کارشناس ارشد مهندسی صنایع از دانشگاه تهران با تخصص در سیستم‌های تضمین کیفیت</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg text-gray-800">مهندس رضا نوروزی</h4>
+                            <p class="text-blue-600 mb-2">مدیر پروژه</p>
+                            <p class="text-gray-600">کارشناس ارشد مهندسی برق از دانشگاه علم و صنعت با ۱۰ سال سابقه مدیریت پروژه‌های مکاترونیک</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">محصولات ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581093451193-5eabf1a8f8a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Robotic Arm" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">جدید</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">بازوی رباتیک صنعتی MKR-200</h3>
+                        <p class="text-gray-600 mb-4">سیستم رباتیک ۶ محوره با دقت بالا برای خطوط مونتاژ خودکار</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">۲۵۰,۰۰۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="PLC Controller" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">کنترلر PLC پیشرفته MPC-500</h3>
+                        <p class="text-gray-600 mb-4">کنترلر منطقی برنامه‌پذیر با ۵۰۰ نقطه I/O و رابط کاربری پیشرفته</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">۸۵,۰۰۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774624-9d56a0a82e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Vision System" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm">پرفروش</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">سیستم بینایی ماشین MVS-300</h3>
+                        <p class="text-gray-600 mb-4">سیستم بازرسی بصری با پردازش تصویر پیشرفته برای کنترل کیفیت</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">۱۲۰,۰۰۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774708-8d29c1a6f294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="HMI Panel" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">پنل اپراتوری HMP-15</h3>
+                        <p class="text-gray-600 mb-4">صفحه نمایش لمسی ۱۵ اینچی با رابط کاربری سفارشی‌پذیر</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">۴۵,۰۰۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774567-3a5d0a92b6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="AGV System" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm">تخفیف ویژه</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">وسیله نقلیه خودکار AGV-100</h3>
+                        <p class="text-gray-600 mb-4">سیستم حمل و نقل خودکار با ناوبری لیزری برای انبارهای هوشمند</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="line-through text-gray-400 mr-2">۱۸۰,۰۰۰,۰۰۰ تومان</span>
+                                <span class="font-bold text-gray-800">۱۵۰,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774590-079c0b0fc25e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Sensor Array" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">آرایه سنسوری MSA-50</h3>
+                        <p class="text-gray-600 mb-4">مجموعه سنسورهای صنعتی با قابلیت اتصال به سیستم‌های کنترل مرکزی</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">۳۵,۰۰۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 px-8 py-3 rounded-lg font-medium transition">
+                    مشاهده همه محصولات
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">خدمات تخصصی ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">طراحی و ساخت ربات‌های صنعتی</h3>
+                    <p class="text-gray-600">
+                        طراحی و پیاده‌سازی سیستم‌های رباتیک سفارشی برای خطوط تولید صنعتی با قابلیت‌های پیشرفته کنترل و مانیتورینگ
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-cogs text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">اتوماسیون صنعتی</h3>
+                    <p class="text-gray-600">
+                        پیاده‌سازی سیستم‌های کنترل هوشمند برای خطوط تولید با استفاده از PLC، HMI و SCADA برای بهینه‌سازی فرآیندها
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-eye text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">بینایی ماشین</h3>
+                    <p class="text-gray-600">
+                        توسعه سیستم‌های بازرسی بصری و پردازش تصویر برای کنترل کیفیت، شناسایی اشیا و راهنمایی ربات‌ها
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-microchip text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">طراحی سیستم‌های تعبیه‌شده</h3>
+                    <p class="text-gray-600">
+                        طراحی و توسعه سیستم‌های الکترونیکی تعبیه‌شده سفارشی با میکروکنترلرها و پردازنده‌های پیشرفته
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">تعمیر و نگهداری سیستم‌های مکاترونیک</h3>
+                    <p class="text-gray-600">
+                        ارائه خدمات تعمیر، کالیبراسیون و نگهداری پیشگیرانه برای سیستم‌های مکاترونیکی موجود در صنایع مختلف
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-blue-600 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">مشاوره و راه‌اندازی خطوط تولید</h3>
+                    <p class="text-gray-600">
+                        مشاوره فنی و مهندسی برای مدرنیزاسیون خطوط تولید و پیاده‌سازی راهکارهای مکاترونیکی برای افزایش بهره‌وری
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-lg p-8">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">نیاز به راه‌حل مکاترونیکی دارید؟</h3>
+                        <p class="text-gray-600">
+                            تیم متخصص ما آماده ارائه مشاوره رایگان و طراحی راهکارهای سفارشی متناسب با نیازهای خاص کسب‌وکار شما است.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 text-center md:text-left">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition whitespace-nowrap">
+                            درخواست مشاوره رایگان
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">رویدادها و اخبار</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Main Event -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Main Event" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded mr-2">رویداد ویژه</span>
+                            <span>۲۵ مرداد ۱۴۰۲</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">همایش سالانه فناوری‌های مکاترونیک</h3>
+                        <p class="text-gray-600 mb-4">
+                            پنجمین همایش سالانه فناوری‌های مکاترونیک با حضور اساتید برجسته و شرکت‌های پیشرو در صنعت برگزار خواهد شد. این رویداد فرصتی استثنایی برای شبکه‌سازی و آشنایی با آخرین دستاوردها است.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt ml-2"></i>
+                            <span>تهران، مرکز همایش‌های بین‌المللی صداوسیما</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Events -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">رویدادهای آینده</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Event 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600 text-white text-center py-2 px-3 rounded-lg min-w-[70px]">
+                                <div class="text-xl font-bold">۱۲</div>
+                                <div class="text-xs">شهریور</div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">کارگاه آموزشی سیستم‌های کنترل صنعتی</h4>
+                                <p class="text-sm text-gray-600 mt-1">آموزش عملی برنامه‌نویسی PLC و پیاده‌سازی سیستم‌های کنترل</p>
+                                <div class="flex items-center text-xs text-gray-500 mt-2">
+                                    <i class="fas fa-clock ml-1"></i>
+                                    <span>۸:۳۰ تا ۱۶:۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600 text-white text-center py-2 px-3 rounded-lg min-w-[70px]">
+                                <div class="text-xl font-bold">۲۵</div>
+                                <div class="text-xs">مهر</div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">نمایشگاه بین‌المللی صنایع هوشمند</h4>
+                                <p class="text-sm text-gray-600 mt-1">نمایش آخرین دستاوردهای صنعت مکاترونیک و رباتیک</p>
+                                <div class="flex items-center text-xs text-gray-500 mt-2">
+                                    <i class="fas fa-clock ml-1"></i>
+                                    <span>۱۰:۰۰ تا ۱۸:۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600 text-white text-center py-2 px-3 rounded-lg min-w-[70px]">
+                                <div class="text-xl font-bold">۱۰</div>
+                                <div class="text-xs">آبان</div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">مسابقه ملی ربات‌های صنعتی</h4>
+                                <p class="text-sm text-gray-600 mt-1">رقابت تیم‌های دانشگاهی و صنعتی در حوزه رباتیک پیشرفته</p>
+                                <div class="flex items-center text-xs text-gray-500 mt-2">
+                                    <i class="fas fa-clock ml-1"></i>
+                                    <span>۹:۰۰ تا ۱۷:۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <button class="w-full bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 py-2 rounded-lg font-medium transition">
+                            مشاهده همه رویدادها
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Section -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">آخرین اخبار و مقالات</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- News 1 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="News" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="text-sm text-gray-500 mb-2">۱۵ تیر ۱۴۰۲</div>
+                            <h4 class="font-semibold text-gray-800 mb-2">رونمایی از نسل جدید کنترلرهای صنعتی MPC-600</h4>
+                            <p class="text-sm text-gray-600">شرکت مکاترونیک پیشرو از نسل جدید کنترلرهای صنعتی خود با پردازنده‌های قدرتمندتر رونمایی کرد.</p>
+                            <a href="#" class="inline-block text-blue-600 text-sm mt-3 hover:underline">ادامه مطلب</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News 2 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1626785774567-3a5d0a92b6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="News" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="text-sm text-gray-500 mb-2">۲۸ خرداد ۱۴۰۲</div>
+                            <h4 class="font-semibold text-gray-800 mb-2">همکاری با شرکت آلمانی در پروژه رباتیک مشترک</h4>
+                            <p class="text-sm text-gray-600">شرکت مکاترونیک پیشرو قرارداد همکاری با شرکت رباتیک آلمانی را برای توسعه ربات‌های سروو امضا کرد.</p>
+                            <a href="#" class="inline-block text-blue-600 text-sm mt-3 hover:underline">ادامه مطلب</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News 3 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1626785774624-9d56a0a82e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="News" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="text-sm text-gray-500 mb-2">۵ خرداد ۱۴۰۲</div>
+                            <h4 class="font-semibold text-gray-800 mb-2">مقاله جدید در زمینه بینایی ماشین منتشر شد</h4>
+                            <p class="text-sm text-gray-600">تیم تحقیقاتی شرکت مقاله جدیدی در زمینه الگوریتم‌های پردازش تصویر برای کنترل کیفیت منتشر کرد.</p>
+                            <a href="#" class="inline-block text-blue-600 text-sm mt-3 hover:underline">ادامه مطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">آموزش و دوره‌ها</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 mb-12">
+                <!-- Courses -->
+                <div class="lg:w-2/3">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">دوره‌های آموزشی</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Course 1 -->
+                        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-microchip text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">PLC پیشرفته</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">
+                                آموزش جامع برنامه‌نویسی PLC از مقدماتی تا پیشرفته با تمرکز بر پیاده‌سازی پروژه‌های واقعی
+                            </p>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500"><i class="fas fa-clock ml-1"></i> ۴۰ ساعت</span>
+                                <span class="text-blue-600 font-medium">۲,۵۰۰,۰۰۰ تومان</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 2 -->
+                        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-robot text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">رباتیک صنعتی</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">
+                                آموزش برنامه‌نویسی و کار با ربات‌های صنعتی شامل Fanuc, ABB و KUKA
+                            </p>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500"><i class="fas fa-clock ml-1"></i> ۳۲ ساعت</span>
+                                <span class="text-blue-600 font-medium">۳,۲۰۰,۰۰۰ تومان</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 3 -->
+                        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-eye text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">بینایی ماشین</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">
+                                آموزش پردازش تصویر و بینایی ماشین با OpenCV و HALCON برای کاربردهای صنعتی
+                            </p>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500"><i class="fas fa-clock ml-1"></i> ۳۶ ساعت</span>
+                                <span class="text-blue-600 font-medium">۲,۸۰۰,۰۰۰ تومان</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 4 -->
+                        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-project-diagram text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">SCADA و HMI</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">
+                                آموزش طراحی رابط‌های اپراتوری و سیستم‌های نظارتی با WinCC, Ignition و FactoryTalk
+                            </p>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500"><i class="fas fa-clock ml-1"></i> ۲۸ ساعت</span>
+                                <span class="text-blue-600 font-medium">۲,۲۰۰,۰۰۰ تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button class="bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 px-6 py-2 rounded-lg font-medium transition">
+                            مشاهده همه دوره‌ها
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Training Programs -->
+                <div class="lg:w-1/3">
+                    <div class="bg-blue-50 rounded-lg p-6 h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">برنامه‌های آموزشی سازمانی</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                                    <i class="fas fa-building text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">آموزش اختصاصی در محل شرکت</h4>
+                                    <p class="text-sm text-gray-600 mt-1">برگزاری دوره‌های آموزشی متناسب با نیازهای خاص سازمان شما در محل کارتان</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                                    <i class="fas fa-user-tie text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">مشاوره آموزشی سازمانی</h4>
+                                    <p class="text-sm text-gray-600 mt-1">طراحی برنامه آموزشی اختصاصی برای ارتقای مهارت‌های نیروی انسانی شما</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                                    <i class="fas fa-certificate text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">مدرک معتبر</h4>
+                                    <p class="text-sm text-gray-600 mt-1">اعطای گواهینامه معتبر به شرکت‌کنندگان در پایان دوره‌های آموزشی</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition">
+                                درخواست برنامه آموزشی سازمانی
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Webinars -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-6">وبینارهای رایگان</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Webinar 1 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition">
+                        <div class="p-4 bg-blue-600 text-white">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">وبینار آنلاین</span>
+                                <span class="text-sm">۱۵ مرداد ۱۴۰۲</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-3">آخرین تحولات در رباتیک صنعتی</h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                بررسی آخرین فناوری‌ها و روندهای صنعت رباتیک در سال ۲۰۲۳ و چشم‌انداز آینده
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock ml-2"></i>
+                                <span>ساعت ۱۶:۰۰ تا ۱۸:۰۰</span>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <button class="w-full bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 py-2 rounded-lg text-sm font-medium transition">
+                                ثبت نام رایگان
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Webinar 2 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition">
+                        <div class="p-4 bg-blue-600 text-white">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">وبینار آنلاین</span>
+                                <span class="text-sm">۲۵ مرداد ۱۴۰۲</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-3">اینترنت اشیا در صنعت (IIoT)</h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                کاربردهای اینترنت اشیا صنعتی در مانیتورینگ و بهینه‌سازی فرآیندهای تولید
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock ml-2"></i>
+                                <span>ساعت ۱۵:۰۰ تا ۱۷:۰۰</span>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <button class="w-full bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 py-2 rounded-lg text-sm font-medium transition">
+                                ثبت نام رایگان
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Webinar 3 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition">
+                        <div class="p-4 bg-blue-600 text-white">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">وبینار آنلاین</span>
+                                <span class="text-sm">۵ شهریور ۱۴۰۲</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-3">هوش مصنوعی در سیستم‌های کنترل</h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                بررسی نقش هوش مصنوعی و یادگیری ماشین در سیستم‌های کنترل صنعتی
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock ml-2"></i>
+                                <span>ساعت ۱۴:۰۰ تا ۱۶:۰۰</span>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <button class="w-full bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 py-2 rounded-lg text-sm font-medium transition">
+                                ثبت نام رایگان
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">تماس با ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Contact Info -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white rounded-lg shadow-md p-6 h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">اطلاعات تماس</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">آدرس</h4>
+                                    <p class="text-gray-600 mt-1">تهران، خیابان آزادی، بلوار کشاورز، پلاک ۱۲۳، طبقه ۵</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">تلفن</h4>
+                                    <p class="text-gray-600 mt-1">
+                                        <a href="tel:+982188776655" class="hover:text-blue-600 transition">۶۶۵۵ ۸۸۷۷ ۰۲۱</a>
+                                        <br>
+                                        <a href="tel:+989123456789" class="hover:text-blue-600 transition">۶۷۸۹ ۴۵۶ ۰۹۱۲</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">ایمیل</h4>
+                                    <p class="text-gray-600 mt-1">
+                                        <a href="mailto:info@mechatronics-co.com" class="hover:text-blue-600 transition">info@mechatronics-co.com</a>
+                                        <br>
+                                        <a href="mailto:support@mechatronics-co.com" class="hover:text-blue-600 transition">support@mechatronics-co.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">ساعات کاری</h4>
+                                    <p class="text-gray-600 mt-1">
+                                        شنبه تا چهارشنبه: ۸:۰۰ تا ۱۷:۰۰
+                                        <br>
+                                        پنجشنبه: ۸:۰۰ تا ۱۳:۰۰
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-800 mb-4">ما را در شبکه‌های اجتماعی دنبال کنید</h4>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-blue-800 hover:bg-blue-900 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white rounded-lg shadow-md p-6 h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">فرم تماس با ما</h3>
+                        
+                        <form id="contactForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">نام و نام خانوادگی</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">آدرس ایمیل</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">شماره تماس</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">موضوع</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                                    <option value="general">سوال عمومی</option>
+                                    <option value="products">پرسش درباره محصولات</option>
+                                    <option value="services">پرسش درباره خدمات</option>
+                                    <option value="support">پشتیبانی فنی</option>
+                                    <option value="education">دوره‌های آموزشی</option>
+                                    <option value="other">سایر</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">پیام شما</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required></textarea>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="agree" name="agree" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 ml-2" required>
+                                <label for="agree" class="text-sm text-gray-600">با <a href="#" class="text-blue-600 hover:underline">قوانین و مقررات</a> موافقم</label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-12 bg-white rounded-lg shadow-md overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.817075729616!2d51.38827731526939!3d35.69952398018581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzU4LjMiTiA1McKwMjMnMjMuNiJF!5e0!3m2!1sen!2sir!4v1620000000000!5m2!1sen!2sir" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">درباره ما</h3>
+                    <p class="text-gray-400 mb-4">
+                        شرکت مهندسی مکاترونیک پیشرو با بیش از ۱۵ سال سابقه در طراحی و پیاده‌سازی سیستم‌های مکاترونیکی، ارائه‌دهنده راهکارهای نوآورانه در صنعت است.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-telegram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">خانه</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">درباره ما</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">محصولات</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">خدمات</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition">رویدادها</a></li>
+                        <li><a href="#education" class="text-gray-400 hover:text-white transition">آموزش</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">محصولات</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">ربات‌های صنعتی</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">سیستم‌های کنترل</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">بینایی ماشین</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">پنل‌های اپراتوری</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">وسایل نقلیه خودکار</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">سنسورها و ابزار دقیق</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">خبرنامه</h3>
+                    <p class="text-gray-400 mb-4">
+                        با عضویت در خبرنامه، از آخرین اخبار، محصولات و رویدادهای ما مطلع شوید.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="آدرس ایمیل" class="px-4 py-2 rounded-r-lg w-full focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-l-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © ۱۴۰۲ کلیه حقوق برای شرکت مهندسی مکاترونیک پیشرو محفوظ است.
+                </div>
+                <div class="flex space-x-6 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">قوانین و مقررات</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">حریم خصوصی</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">سوالات متداول</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.');
+            
+            // Reset the form
+            this.reset();
+        });
+
+        // Product card hover effect
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>
